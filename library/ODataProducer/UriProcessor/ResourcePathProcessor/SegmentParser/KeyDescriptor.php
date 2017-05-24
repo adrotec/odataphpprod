@@ -63,7 +63,7 @@ use ODataProducer\Providers\Metadata\Type\Single;
 use ODataProducer\Providers\Metadata\Type\Int64;
 use ODataProducer\Providers\Metadata\Type\Double;
 use ODataProducer\Providers\Metadata\Type\Decimal;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Providers\Metadata\Type\Guid;
 use ODataProducer\Providers\Metadata\Type\DateTime;
 use ODataProducer\Providers\Metadata\Type\Boolean;
@@ -512,7 +512,7 @@ class KeyDescriptor
             $outType = new Guid();
             break;
         case ExpressionTokenId::STRING_LITERAL:
-            $outType = new String();
+            $outType = new StringType();
             break;
         case ExpressionTokenId::INTEGER_LITERAL:
             $outType = new Int32();

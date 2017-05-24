@@ -13,7 +13,7 @@ use ODataProducer\Providers\Metadata\Type\Single;
 use ODataProducer\Providers\Metadata\Type\Decimal;
 use ODataProducer\Providers\Metadata\Type\DateTime;
 use ODataProducer\Providers\Metadata\Type\Binary;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Providers\Metadata\Type\Navigation;
 use ODataProducer\Providers\Metadata\Type\Boolean;
 use ODataProducer\Providers\Metadata\Type\Null1;
@@ -157,7 +157,7 @@ class ExpressionParserTest extends PHPUnit_Framework_TestCase
            		         false);
            $expr = $parser->parseFilter();
            $this->AssertEquals($expr instanceof PropertyAccessExpression, true);
-           $this->AssertEquals($expr->getType() instanceof String, true);
+           $this->AssertEquals($expr->getType() instanceof StringType, true);
 
            $expression = 'Rating';
            $expr = $parser->resetParser($expression);
@@ -242,7 +242,7 @@ class ExpressionParserTest extends PHPUnit_Framework_TestCase
            		         false);
            $expr = $parser->parseFilter();
            $this->AssertEquals($expr instanceof PropertyAccessExpression, true);
-           $this->AssertEquals($expr->getType() instanceof String, true); 
+           $this->AssertEquals($expr->getType() instanceof StringType, true); 
            $this->AssertEquals($expr->getResourceType()->getFullName(), 'Edm.String');
            
            $exceptionThrown = false;
@@ -487,8 +487,8 @@ class ExpressionParserTest extends PHPUnit_Framework_TestCase
             $paramExpression = $expr->getLeft()->getParamExpressions();
             $this->AssertEquals($paramExpression[0] instanceof PropertyAccessExpression, true);
             $this->AssertEquals($paramExpression[1] instanceof ConstantExpression, true);
-            $this->AssertEquals($paramExpression[0]->getType() instanceof String, true);
-            $this->AssertEquals($paramExpression[1]->getType() instanceof String, true);
+            $this->AssertEquals($paramExpression[0]->getType() instanceof StringType, true);
+            $this->AssertEquals($paramExpression[1]->getType() instanceof StringType, true);
             $this->AssertEquals($expr->getRight() instanceof ConstantExpression, true);
             $this->AssertEquals($expr->getRight()->getValue(), 0);
 

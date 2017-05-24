@@ -35,7 +35,7 @@ namespace ODataProducer\Writers\Common;
 use ODataProducer\Writers\Atom\AtomODataWriter;
 use ODataProducer\Writers\Json\JsonODataWriter;
 use ODataProducer\Writers\Common\IODataWriter;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\ObjectModel\ODataURL;
 use ODataProducer\ObjectModel\ODataURLCollection;
 use ODataProducer\ObjectModel\ODataFeed;

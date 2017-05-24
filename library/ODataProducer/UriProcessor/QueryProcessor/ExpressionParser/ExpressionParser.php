@@ -38,7 +38,7 @@ use ODataProducer\Common\ODataException;
 use ODataProducer\Providers\Metadata\Type\Boolean;
 use ODataProducer\Providers\Metadata\Type\DateTime;
 use ODataProducer\Providers\Metadata\Type\Decimal;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Providers\Metadata\Type\Int64;
 use ODataProducer\Providers\Metadata\Type\Int32;
 use ODataProducer\Providers\Metadata\Type\Double;
@@ -441,7 +441,7 @@ class ExpressionParser
         case ExpressionTokenId::IDENTIFIER:
             return $this->_parseIdentifier();
         case ExpressionTokenId::STRING_LITERAL:
-            return $this->_parseTypedLiteral(new String());
+            return $this->_parseTypedLiteral(new StringType());
         case ExpressionTokenId::INT64_LITERAL:
             return $this->_parseTypedLiteral(new Int64());
         case ExpressionTokenId::INTEGER_LITERAL:
@@ -733,7 +733,7 @@ class ExpressionParser
         //Will make these comparison as function calls, which will 
         // be converted to language specific function call by expression 
         // provider
-        $string = new String();
+        $string = new StringType();
         if ($left->typeIs($string) && $right->typeIs($string)) {
             $strcmpFunctions 
                 = FunctionDescription::stringComparisionFunctions();

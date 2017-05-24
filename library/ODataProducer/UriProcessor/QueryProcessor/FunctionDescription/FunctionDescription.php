@@ -46,7 +46,7 @@ use ODataProducer\Providers\Metadata\Type\Double;
 use ODataProducer\Providers\Metadata\Type\Decimal;
 use ODataProducer\Providers\Metadata\Type\DateTime;
 use ODataProducer\Providers\Metadata\Type\Int32;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Providers\Metadata\Type\Boolean;
 use ODataProducer\Providers\Metadata\Type\Void;
 use ODataProducer\Providers\Metadata\Type\Binary;
@@ -123,81 +123,81 @@ class FunctionDescription
                                 array(
                                     new FunctionDescription(
                                         'endswith', new Boolean(), 
-                                        array(new String(), new String())
+                                        array(new StringType(), new StringType())
                                     )
                                 ),
                             'indexof'       => 
                                 array(
                                     new FunctionDescription(
                                         'indexof', new Int32(), 
-                                        array(new String(), new String())
+                                        array(new StringType(), new StringType())
                                     )
                                 ),
                             'replace'       => 
                                 array(
                                     new FunctionDescription(
-                                        'replace', new String(), 
-                                        array(new String(), new String(), new String())
+                                        'replace', new StringType(), 
+                                        array(new StringType(), new StringType(), new StringType())
                                     )
                                 ),
                             'startswith'    => 
                                 array(
                                     new FunctionDescription(
                                         'startswith', new Boolean(), 
-                                        array(new String(), new String())
+                                        array(new StringType(), new StringType())
                                     )
                                 ),
                             'tolower'       => 
                                 array(
                                     new FunctionDescription(
-                                        'tolower', new String(), 
-                                        array(new String())
+                                        'tolower', new StringType(), 
+                                        array(new StringType())
                                     )
                                 ),
                             'toupper'       => 
                                 array(
                                     new FunctionDescription(
-                                        'toupper', new String(), 
-                                        array(new String())
+                                        'toupper', new StringType(), 
+                                        array(new StringType())
                                     )
                                 ),
                             'trim'          => 
                                 array(
                                     new FunctionDescription(
-                                        'trim', new String(), 
-                                        array(new String())
+                                        'trim', new StringType(), 
+                                        array(new StringType())
                                     )
                                 ),
                             'substring'     => 
                                 array(
                                     new FunctionDescription(
-                                        'substring', new String(), 
-                                        array(new String(), new Int32())
+                                        'substring', new StringType(), 
+                                        array(new StringType(), new Int32())
                                     ),
                                     new FunctionDescription(
-                                        'substring', new String(), 
-                                        array(new String(), new Int32(), new Int32())
+                                        'substring', new StringType(), 
+                                        array(new StringType(), new Int32(), new Int32())
                                     )
                                 ),
                             'substringof'   => 
                                 array(
                                     new FunctionDescription(
                                         'substringof', new Boolean(), 
-                                        array(new String(), new String())
+                                        array(new StringType(), new StringType())
                                     )
                                 ),
                             'concat'        => 
                                 array(
                                     new FunctionDescription(
-                                        'concat', new String(), 
-                                        array(new String(), new String())
+                                        'concat', new StringType(), 
+                                        array(new StringType(), new StringType())
                                     )
                                 ),
                             'length'        => 
                                 array(
                                     new FunctionDescription(
                                         'length', new Int32(), 
-                                        array(new String())
+                                        array(new StringType())
                                     )
                                 ),
                             //DateTime functions
@@ -292,7 +292,7 @@ class FunctionDescription
         return array(
             new FunctionDescription(
                 'strcmp', new Int32(), 
-                array(new String(), new String())
+                array(new StringType(), new StringType())
             )
         );
     }

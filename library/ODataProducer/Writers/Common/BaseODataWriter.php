@@ -33,7 +33,7 @@
  */
 namespace ODataProducer\Writers\Common;
 use ODataProducer\Providers\Metadata\Type\Boolean;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Common\ODataException;
 use ODataProducer\ObjectModel\ODataFeed;
 use ODataProducer\ObjectModel\ODataEntry;

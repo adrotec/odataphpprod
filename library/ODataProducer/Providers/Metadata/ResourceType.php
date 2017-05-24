@@ -44,7 +44,7 @@ use ODataProducer\Providers\Metadata\Type\Int32;
 use ODataProducer\Providers\Metadata\Type\Int64;
 use ODataProducer\Providers\Metadata\Type\SByte;
 use ODataProducer\Providers\Metadata\Type\Single;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Providers\Metadata\Type\TypeCode;
 use ODataProducer\Providers\Metadata\Type\EdmPrimitiveType;
 use ODataProducer\Providers\Metadata\Type\IType;
@@ -943,7 +943,7 @@ class ResourceType
             break;
         case EdmPrimitiveType::STRING:
             return new ResourceType(
-                new String(), 
+                new StringType(), 
                 ResourceTypeKind::PRIMITIVE, 
                 'String', 'Edm'
             );

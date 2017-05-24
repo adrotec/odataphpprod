@@ -43,7 +43,7 @@ namespace ODataProducer\Providers\Metadata\Type;
  * @version   GIT: 1.2
  * @link      https://github.com/MSOpenTech/odataphpprod
  */
-class String implements IType
+class StringType implements IType
 {
     /**
      * Gets the type code

@@ -37,7 +37,7 @@ namespace ODataProducer\UriProcessor\QueryProcessor\SkipTokenParser;
 use ODataProducer\Providers\Metadata\Type\Guid;
 use ODataProducer\Providers\Metadata\Type\Null1;
 use ODataProducer\Providers\Metadata\Type\DateTime;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Providers\Metadata\ResourceType;
 use ODataProducer\UriProcessor\QueryProcessor\OrderByParser\InternalOrderByInfo;
 use ODataProducer\Common\Messages;

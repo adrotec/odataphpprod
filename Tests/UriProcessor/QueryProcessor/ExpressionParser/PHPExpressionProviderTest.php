@@ -13,7 +13,7 @@ use ODataProducer\Providers\Metadata\Type\Single;
 use ODataProducer\Providers\Metadata\Type\Decimal;
 use ODataProducer\Providers\Metadata\Type\DateTime;
 use ODataProducer\Providers\Metadata\Type\Binary;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Providers\Metadata\Type\Navigation;
 use ODataProducer\Providers\Metadata\Type\Boolean;
 use ODataProducer\Providers\Metadata\Type\Null1;

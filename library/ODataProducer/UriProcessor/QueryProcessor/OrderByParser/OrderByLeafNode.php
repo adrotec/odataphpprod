@@ -36,7 +36,7 @@
 namespace ODataProducer\UriProcessor\QueryProcessor\OrderByParser;
 use ODataProducer\UriProcessor\QueryProcessor\AnonymousFunction;
 use ODataProducer\Providers\Metadata\Type\Guid;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Providers\Metadata\Type\DateTime;
 use ODataProducer\Providers\Metadata\ResourceProperty;
 use ODataProducer\Common\Messages;
@@ -179,7 +179,7 @@ class OrderByLeafNode extends OrderByBaseNode
         $type = $this->resourceProperty->getInstanceType();
         if ($type instanceof DateTime) {
             $code .= " \$result = strtotime($accessor1) - strtotime($accessor2);";
-        } else if ($type instanceof String) {
+        } else if ($type instanceof StringType) {
             $code .= " \$result = strcmp($accessor1, $accessor2);";
         } else if ($type instanceof Guid) {
             $code .= " \$result = strcmp($accessor1, $accessor2);";

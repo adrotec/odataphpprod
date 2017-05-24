@@ -32,7 +32,7 @@
  * 
  */
 namespace ODataProducer\ObjectModel;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 /**
  * Type to represents result of $links request.
  * 

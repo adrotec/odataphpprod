@@ -45,7 +45,7 @@ use ODataProducer\Providers\Metadata\ResourceProperty;
 use ODataProducer\Providers\MetadataQueryProviderWrapper;
 use ODataProducer\Providers\Metadata\Type\Binary;
 use ODataProducer\Providers\Metadata\Type\Boolean;
-use ODataProducer\Providers\Metadata\Type\String;
+use ODataProducer\Providers\Metadata\Type\StringType;
 use ODataProducer\Common\ODataException;
 use ODataProducer\Common\Messages;
 /**
@@ -873,7 +873,7 @@ class ObjectModelSerializer extends ObjectModelSerializerBase
             $stringValue = ($primitiveValue === true) ? 'true' : 'false';
         } else if ($type instanceof Binary) {
                 $stringValue = base64_encode($primitiveValue);
-        } else if ($type instanceof String) {
+        } else if ($type instanceof StringType) {
             $stringValue = utf8_encode($primitiveValue);
         } else {        
             $stringValue = strval($primitiveValue);
