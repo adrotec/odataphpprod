@@ -1,3 +1,8 @@
+# Project Status:  🚨 Unmaintained 🚨
+
+This project is no longer maintained. We will not be accepting pull requests, addressing issues, nor making future releases.
+
+
 OData Producer Library for PHP V1.2
 ============
 
